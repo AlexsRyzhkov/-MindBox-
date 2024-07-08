@@ -1,0 +1,10 @@
+.p-card-body {
+    padding: 0;
+}
+
+.p-card-content {
+    display: flex;
+    align-items: center;
+    padding: 15px 15px;
+    overflow-wrap: anywhere;
+}
