@@ -35,8 +35,13 @@ export const TaskForm: FC = () => {
                 placeholder={'Название'}
                 value={taskName}
                 onChange={onInputChange}
+                data-testid={'input-task'}
             />
-            <Button label='Создать' className='p-2 px-6 text-[12px]'/>
+            <Button
+                label='Создать'
+                className='p-2 px-6 text-[12px]'
+                data-testid={'add-task-btn'}
+            />
         </form>
     )
 }

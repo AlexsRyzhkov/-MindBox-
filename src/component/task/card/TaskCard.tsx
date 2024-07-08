@@ -31,14 +31,25 @@ export const TaskCard: FC<ITaskCardProps> = ({ id, name, completed }) => {
     }
 
     return (
-        <Card onClick={onChangeCheckbox} className='cursor-pointer'>
-            <Checkbox checked={checked}/>
-            <p className='text-xl mx-5 flex-shrink flex-grow' style={{ textDecoration: checked ? 'line-through' : 'inherit' }}>{name}</p>
+        <Card onClick={onChangeCheckbox} className='cursor-pointer' data-testid={'task-card'}>
+            <Checkbox
+                checked={checked}
+                data-testid='checkbox-container'
+                pt={{ input: { 'data-testid': 'checkbox' } }}
+            />
+            <p
+                className='text-xl mx-5 flex-shrink flex-grow'
+                style={{ textDecoration: checked ? 'line-through' : 'inherit' }}
+                data-testid={'task-card-name'}
+            >
+                {name}
+            </p>
             <Button
                 icon="pi pi-times"
                 unstyled
                 className={'flex items-center hover:bg-slate-400 pl-[4px] rounded hover:text-white active:bg-slate-500'}
                 onClick={onRemoveTask}
+                data-testid={'remove-btn'}
             />
         </Card>
     )

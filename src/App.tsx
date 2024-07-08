@@ -5,7 +5,7 @@ import { TaskForm } from "./component/task/form/TaskForm.tsx";
 import { FilterSelect } from "./component/task/filter-select/FilterSelect.tsx";
 import { TaskList } from "./component/task/list/TaskList.tsx";
 import { TaskProvider } from "./component/task/context/TaskContext.tsx";
-
+import './app.css'
 
 export const App = () => {
     return (

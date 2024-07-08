@@ -28,6 +28,8 @@ export const FilterSelect: FC = () => {
             onChange={onFilterChange}
             options={filters}
             optionLabel="name"
+            data-testid={'select-filter'}
+            pt={{ item: { 'data-testid': 'select-item' }, }}
             className="p-2 min-w-[120px]"
         />
     )
