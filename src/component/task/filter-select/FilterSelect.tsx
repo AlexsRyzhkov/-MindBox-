@@ -11,8 +11,8 @@ interface IFilter {
 export const FilterSelect: FC = () => {
     const filters: IFilter[] = [
         { name: 'Все', code: 'all' },
-        { name: 'Выполненые', code: 'completed' },
-        { name: 'Активные', code: 'active' },
+        { name: 'Выполненные', code: 'completed' },
+        { name: 'В процессе', code: 'active' },
     ];
     const [selectedFilters, setSelectedFilters] = useState<IFilter>(filters[0]);
     const { setFilter } = useTaskContext()
