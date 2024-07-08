@@ -2,7 +2,10 @@ import { afterEach } from 'vitest'
 import { cleanup } from '@testing-library/react'
 import '@testing-library/jest-dom/vitest';
 
-/// Библитека PrimeReact имеет баг во время тестирования
+// Библиотека PrimeReact имеет баг
+// во время тестирования выдает ошибку компиляции css
+// эта ошибка не влияет на тестирование но мешает чтению логов тестов
+// поэтому я отключил ее командой ниже
 const originalConsoleError = console.error;
 const jsDomCssError = "Error: Could not parse CSS stylesheet";
 console.error = (...params) => {
